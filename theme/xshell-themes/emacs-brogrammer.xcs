@@ -1,0 +1,24 @@
+[Names]
+name0=emacs2
+count=1
+[emacs2]
+
+fg text=8e8e8e
+bd  cyan(bold)=2d96ff
+3  text(bold)=8080ff
+11  magenta=2d96ff
+13  green=8df19c
+6  green(bold)=ff8080
+bg  background=1e1e1e
+5  cyan=8df19c
+8  red(bold)=8080c0
+7  yellow=ee0000
+12  magenta(bold)=804000
+14  yellow(bold)=2d96ff
+4  red=8080ff
+15  white=00aa55
+10  blue(bold)=00b058
+16  white(bold)=750000
+1  black=626262
+9  blue=ffff00
+2  black(bold)=b90000

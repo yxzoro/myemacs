@@ -1,0 +1,186 @@
+# pip install -r  OpenStackNewton.txt
+
+# All OpenStack-Newton projects
+# Service Projects
+
+aodh
+barbican
+ceilometer
+cinder
+cloudkitty
+congress
+designate
+freezer
+glance
+heat
+horizon
+ironic
+keystone
+magnum
+manila
+mistral
+monasca-api
+monasca-log-api
+murano
+neutron
+nova
+panko
+sahara
+searchlight
+senlin
+solum
+swift
+tacker
+trove
+vitrage
+watcher
+zaqar
+
+
+# Library Projects
+
+automaton
+ceilometermiddleware
+cliff
+debtcollector
+django_openstack_auth
+futurist
+glance-store
+instack
+ironic-lib
+keystoneauth
+keystonemiddleware
+monasca-statsd
+mox3
+neutron-lib
+os-brick
+os-client-config
+os-vif
+os-win
+osc-lib
+oslo.cache
+oslo.concurrency
+oslo.config
+oslo.context
+oslo.db
+oslo.i18n
+oslo.log
+oslo.messaging
+oslo.middleware
+oslo.policy
+oslo.privsep
+oslo.reports
+oslo.rootwrap
+oslo.serialization
+oslo.service
+oslo.utils
+oslo.versionedobjects
+oslo.vmware
+oslosphinx
+oslotest
+osprofiler
+pycadf
+python-aodhclient
+python-barbicanclient
+python-brick-cinderclient-ext
+python-ceilometerclient
+python-cinderclient
+python-cloudkittyclient
+python-congressclient
+python-designateclient
+python-freezerclient
+python-glanceclient
+python-heatclient
+python-ironic-inspector-client
+python-ironicclient
+python-keystoneclient
+python-magnumclient
+python-manilaclient
+python-mistralclient
+python-monascaclient
+python-muranoclient
+python-neutronclient
+python-novaclient
+python-saharaclient
+python-searchlightclient
+python-senlinclient
+python-swiftclient
+python-tackerclient
+python-troveclient
+python-vitrageclient
+python-watcherclient
+python-zaqarclient
+stevedore
+taskflow
+tooz
+tripleo-validations
+
+
+# ## Horizon Plugins
+
+# cloudkitty-dashboard
+# designate-dashboard
+# freezer-web-ui
+# ironic-ui
+# magnum-ui
+# manila-ui
+# monasca-ui
+# murano-dashboard
+# searchlight-ui
+# senlin-dashboard
+# solum-dashboard
+# tacker-horizon
+# trove-dashboard
+# vitrage-dashboard
+# watcher-dashboard
+# zaqar-ui
+
+
+# ## Other Projects
+
+# bifrost
+# ironic-inspector
+# ironic-python-agent
+# mistral-extra
+# monasca-agent
+# monasca-ceilometer
+# monasca-common
+# monasca-notification
+# monasca-persister
+# monasca-thresh
+# murano-agent
+# networking-hyperv
+# networking-ovn
+# neutron-dynamic-routing
+# neutron-fwaas
+# neutron-lbaas
+# neutron-vpnaas
+# octavia
+# os-apply-config
+# os-cloud-config
+# os-collect-config
+# os-net-config
+# os-refresh-config
+# python-openstackclient
+# python-solumclient
+# solum-infra-guestagent
+# tripleo-image-elements
+# tripleo-quickstart
+# tripleo-ui
+
+
+# ## Projects Trailing the Release Cycle
+
+# fuel-agent
+# fuel-astute
+# fuel-library
+# fuel-main
+# fuel-menu
+# fuel-nailgun-agent
+# fuel-ostf
+# fuel-qa
+# fuel-ui
+# fuel-virtualbox
+# fuel-web
+# instack-undercloud
+# 

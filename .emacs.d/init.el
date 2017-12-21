@@ -119,8 +119,9 @@
     (setq exec-path (split-string path-from-shell path-separator))))
 
 (when window-system (set-exec-path-from-shell-PATH))
+;;--------------------------------------------------------
+;; must change this to your $GOPATH first !
 (setenv "GOPATH" "/home/go")
-
 (add-to-list 'exec-path "/home/go/bin")
 
 (defun my-go-mode-hook ()

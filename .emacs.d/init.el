@@ -1,4 +1,4 @@
-;; ==== this is a simple version my emacs config: ====
+;; ==== this is py+go+java version my emacs config: ====
 
 ;;Install Packages
 (require 'package)
@@ -45,27 +45,32 @@
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 (setq-default truncate-lines t)  ;; no wordwrap when line is long
 
+;; theme
+(add-to-list 'custom-theme-load-path "~/.emacs.d/elpa/atom-one-dark-theme-20181010.1348/")
+(load-theme 'atom-one-dark t)
 
+
+;; use flycheck not flymake with elpy mode
 (elpy-enable)
-
-;; use flycheck not flymake with elpy
 (when (require 'flycheck nil t)
   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
   (add-hook 'elpy-mode-hook 'flycheck-mode))
 
-;; evil mode using vim's keybinding:
+;; start evil mode which simulate vim keybinding:
 (require 'evil)
+(evil-mode 1)
 
 ;;magit: 
 (global-set-key (kbd "C-x g") 'magit-status)
 
 (require 'py-autopep8)
 
-(add-to-list 'load-path "/root/.emacs.d/elpa/neotree-20160306.730/")
+;; neotree
+(add-to-list 'load-path "~/.emacs.d/elpa/neotree-20170522.758/")
 (require 'neotree)
 
 ;; emacs backup file path
-(setq backup-directory-alist (quote ((".*" . "~/.myemacs_backups/"))))
+(setq backup-directory-alist (quote ((".*" . "~/.backups/"))))
 
 ;; show git diff: 
 (global-git-gutter-mode +1)
@@ -108,7 +113,7 @@
 (global-undo-tree-mode 1) 
 
 
-;; ---------------------------------------go-------------------------------------------
+;; ---------------------------------------go-----------------------------------------
 (defun set-exec-path-from-shell-PATH ()
   (let ((path-from-shell (replace-regexp-in-string
                           "[ \t\n]*$"
@@ -121,8 +126,8 @@
 (when window-system (set-exec-path-from-shell-PATH))
 ;;--------------------------------------------------------
 ;; must change this to your $GOPATH first !
-(setenv "GOPATH" "/home/go")
-(add-to-list 'exec-path "/home/go/bin")
+(setenv "GOPATH" (getenv "GOPATH") )
+(add-to-list 'exec-path (concat (getenv "GOPATH") "/bin")  )
 
 (defun my-go-mode-hook ()
       (add-hook 'before-save-hook 'gofmt-before-save)
@@ -156,7 +161,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-	(meghanada exec-path-from-shell go-complete go-autocomplete go-snippets go-errcheck go-eldoc go-mode git-gutter jedi highlight-symbol switch-window ace-jump-mode helm py-autopep8 flycheck elpy magit ein better-defaults multiple-cursors neotree evil))))
+	(atom-dark-theme atom-one-dark-theme meghanada exec-path-from-shell go-complete go-autocomplete go-snippets go-errcheck go-eldoc go-mode git-gutter jedi highlight-symbol switch-window ace-jump-mode helm py-autopep8 flycheck elpy magit ein better-defaults multiple-cursors neotree evil))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

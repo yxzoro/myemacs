@@ -108,7 +108,7 @@
 (global-undo-tree-mode 1) 
 
 
-;; ---------------------------------------go setting-------------------------------------------
+;; ---------------------------------------go-------------------------------------------
 (defun set-exec-path-from-shell-PATH ()
   (let ((path-from-shell (replace-regexp-in-string
                           "[ \t\n]*$"
@@ -138,8 +138,13 @@
 (with-eval-after-load 'go-mode
 (require 'go-autocomplete))
 
+;;-------------------------------------------java-------------------------------------
+(require  'meghanada)
+(defun tkj-java-meghanda-mode-hook ()
+    (meghanada-mode)
+    (flycheck-mode))
+(add-hook 'java-mode-hook 'tkj-java-meghanda-mode-hook)
 ;;-------------------------------------------------------------------------------------------
-
 
 ;;------------------- you need to install some Python Packages using pip:--------------------;;
 ;; pip install flake8==2.6 autopep8 jedi
@@ -151,7 +156,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-	(exec-path-from-shell go-complete go-autocomplete go-snippets go-errcheck go-eldoc go-mode git-gutter jedi highlight-symbol switch-window ace-jump-mode helm py-autopep8 flycheck elpy magit ein better-defaults multiple-cursors neotree evil))))
+	(meghanada exec-path-from-shell go-complete go-autocomplete go-snippets go-errcheck go-eldoc go-mode git-gutter jedi highlight-symbol switch-window ace-jump-mode helm py-autopep8 flycheck elpy magit ein better-defaults multiple-cursors neotree evil))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

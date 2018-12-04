@@ -143,13 +143,15 @@
 (with-eval-after-load 'go-mode
 (require 'go-autocomplete))
 
-;;-------------------------------------------java-------------------------------------
+;;-------------------------------------------java-------------------------------------------------------
+;; notice that: your java code must be in a gradle/maven project dir for meghanada mode to recognize !
+;; if not, meghanada server will start failed...
 (require  'meghanada)
 (defun tkj-java-meghanda-mode-hook ()
     (meghanada-mode)
     (flycheck-mode))
 (add-hook 'java-mode-hook 'tkj-java-meghanda-mode-hook)
-;;-------------------------------------------------------------------------------------------
+;;------------------------------------------------------------------------------------------------------
 
 ;;------------------- you need to install some Python Packages using pip:--------------------;;
 ;; pip install flake8==2.6 autopep8 jedi

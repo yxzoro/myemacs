@@ -110,6 +110,10 @@
 (global-set-key (kbd "[") 'skeleton-pair-insert-maybe)
 (global-set-key (kbd "'") 'skeleton-pair-insert-maybe)   ;; TODO: don't use in lisp-mode'
 
+;; fix end key in xshell bug
+;(define-key global-map "\M-[1~" 'beginning-of-line)
+(define-key global-map [select] 'end-of-line)
+
 (global-undo-tree-mode 1) 
 
 
